@@ -41,10 +41,12 @@ public class FizzBuzzSolutionTest {
         - We should still say "fake deluxe" if the "deluxe" number is odd
         - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
         - All the previous rules for "fizz" and "buzz" are still valid
+
+     tests failing conflict with previous rules ...
      */
 
     @Test
-    @Parameters({ "36, fizz deluxe"})
+    @Parameters({ "36, fizz deluxe", "50, buzz deluxe"})
     public void fizzBuzzNewDeluxe(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }
