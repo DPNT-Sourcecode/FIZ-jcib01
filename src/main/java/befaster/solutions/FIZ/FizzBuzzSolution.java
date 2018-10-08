@@ -9,7 +9,7 @@ public class FizzBuzzSolution {
             result = appendString(result, "fizz");
         }
         if (number % 5 == 0) {
-            result = result + "buzz";
+            result = appendString(result, "buzz");
         }
 
         if (result.isEmpty()) {

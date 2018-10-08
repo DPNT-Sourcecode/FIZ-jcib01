@@ -1,7 +1,9 @@
 package befaster.solutions.FIZ;
 
+import junitparams.JUnitParamsRunner;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -10,7 +12,7 @@ import static org.hamcrest.Matchers.equalTo;
  * Created by sujith on 08/10/2018.
  */
 
-
+@RunWith(JUnitParamsRunner.class)
 public class FizzBuzzSolutionTest {
     private FizzBuzzSolution solution;
     @Before
@@ -25,6 +27,7 @@ public class FizzBuzzSolutionTest {
         assertThat(solution.fizzBuzz(3), equalTo("fizz"));
         assertThat(solution.fizzBuzz(5), equalTo("buzz"));
         assertThat(solution.fizzBuzz(15), equalTo("fizz buzz"));
+        assertThat(solution.fizzBuzz(13), equalTo("13"));
     }
 
 
