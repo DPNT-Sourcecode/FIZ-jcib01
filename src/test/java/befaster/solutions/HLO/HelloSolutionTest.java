@@ -19,7 +19,7 @@ public class HelloSolutionTest {
 
     @Test
     public void hello() throws Exception {
-        assertThat(helloSolution.hello(""), equalTo("Hello"));
+        assertThat(helloSolution.hello(""), equalTo("Hello, World!"));
     }
 
 }
