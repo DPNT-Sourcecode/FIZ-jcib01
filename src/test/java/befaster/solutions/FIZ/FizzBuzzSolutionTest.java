@@ -23,32 +23,19 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    @Parameters({"1, 1", "2, 2", "3, fizz fake deluxe", "5, buzz fake deluxe", "15, fizz buzz", "13, fizz", "58, buzz", "53, fizz buzz"})
+    @Parameters({"1, 1", "2, 2", "3, fizz fake deluxe", "5, buzz fake deluxe", "15, fizz buzz fake deluxe", "13, fizz", "58, buzz", "53, fizz buzz"})
     public void fizzBuzz(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }
 
     @Test
-    @Parameters({ "555, fizz buzz fake deluxe"})
+    @Parameters({"555, fizz buzz fake deluxe"})
     public void fizzBuzzDeluxe(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }
 
-    /**
-        - The old rules for "deluxe" do not apply.
-        - A number is "fizz deluxe" if it is divisible by 3 AND it has a 3 in it
-        - A number is "buzz deluxe" if it is divisible by 5 AND it has a 5 in it
-        - We should still say "fake deluxe" if the "deluxe" number is odd
-        - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
-        - All the previous rules for "fizz" and "buzz" are still valid
-
-     tests failing conflict with previous rules ...
-     why fake deluxe?...
-
-     */
-
     @Test
-    @Parameters({ "36, fizz deluxe", "50, buzz deluxe", "330, fizz buzz deluxe"})
+    @Parameters({"36, fizz deluxe", "50, buzz deluxe", "330, fizz buzz deluxe"})
     public void fizzBuzzNewDeluxe(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }

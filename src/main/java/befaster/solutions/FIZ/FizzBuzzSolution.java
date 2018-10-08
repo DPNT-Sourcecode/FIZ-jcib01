@@ -32,7 +32,7 @@ public class FizzBuzzSolution {
 
     //new rule for deluxe ...
     private boolean isDeluxe(Integer number, String numberString) {
-        if ((number % 3 ==0 && numberString.contains("3")) || (number % 5 ==0 && numberString.contains("5"))) {
+        if ((number % 3 == 0 && numberString.contains("3")) || (number % 5 == 0 && numberString.contains("5"))) {
             return true;
         }
         return false;
