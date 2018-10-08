@@ -23,6 +23,8 @@ public class FizzBuzzSolutionTest {
         assertThat(solution.fizzBuzz(1), equalTo("1"));
         assertThat(solution.fizzBuzz(2), equalTo("2"));
         assertThat(solution.fizzBuzz(3), equalTo("fizz"));
+        assertThat(solution.fizzBuzz(5), equalTo("buzz"));
+        assertThat(solution.fizzBuzz(15), equalTo("fizz buzz"));
     }
 
 
