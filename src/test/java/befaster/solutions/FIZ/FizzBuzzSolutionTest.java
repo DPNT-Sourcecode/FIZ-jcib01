@@ -32,9 +32,10 @@ public class FizzBuzzSolutionTest {
         - A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
         - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
             muliple of three, contains 5 and all digit are 5 -> 555
+            555 is odd so it should be fake deluxe
      */
     @Test
-    @Parameters({ "555, fizz buzz deluxe"})
+    @Parameters({ "555, fizz buzz fake deluxe"})
     public void fizzBuzzDeluxe(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }
