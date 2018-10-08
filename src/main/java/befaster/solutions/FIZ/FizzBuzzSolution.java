@@ -6,7 +6,7 @@ public class FizzBuzzSolution {
         String numberString = number.toString();
         String result = "";
         if (number % 3 == 0) {
-            result = result + "fizz";
+            result = appendString(result, "fizz");
         }
         if (number % 5 == 0) {
             result = result + "buzz";
@@ -18,5 +18,13 @@ public class FizzBuzzSolution {
         }
         return result;
     }
+
+    private String appendString(String result, String appendString) {
+        if(!result.isEmpty()){
+            result = result + " ";
+        }
+        return result + appendString;
+    }
+
 
 }
