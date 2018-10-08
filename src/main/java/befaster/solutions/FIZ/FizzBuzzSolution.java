@@ -11,12 +11,19 @@ public class FizzBuzzSolution {
         if (isBuzz(number, numberString)) {
             result = appendString(result, "buzz");
         }
+        if(isDeluxe(number, numberString)){
+            result = appendString(result, "deluxe");
+        }
 
         if (result.isEmpty()) {
             result = result + numberString;
 
         }
         return result;
+    }
+
+    private boolean isDeluxe(Integer number, String numberString) {
+        return false;
     }
 
     private boolean isBuzz(Integer number, String numberString) {
@@ -35,4 +42,4 @@ public class FizzBuzzSolution {
     }
 
 
-}
+}
