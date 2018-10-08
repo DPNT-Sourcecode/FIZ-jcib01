@@ -23,7 +23,14 @@ public class FizzBuzzSolution {
     }
 
     private boolean isDeluxe(Integer number, String numberString) {
+        if(number>10 && (allDigitsMatch(numberString))){
+            return true;
+        }
         return false;
+    }
+
+    private boolean allDigitsMatch(String numberString) {
+        return numberString.chars().allMatch( c -> c == numberString.charAt(0));
     }
 
     private boolean isBuzz(Integer number, String numberString) {
