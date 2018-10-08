@@ -5,10 +5,10 @@ public class FizzBuzzSolution {
     public String fizzBuzz(Integer number) {
         String numberString = number.toString();
         String result = "";
-        if (number % 3 == 0) {
+        if (number % 3 == 0 || numberString.contains("3")) {
             result = appendString(result, "fizz");
         }
-        if (number % 5 == 0) {
+        if (number % 5 == 0 || numberString.contains("5")) {
             result = appendString(result, "buzz");
         }
 

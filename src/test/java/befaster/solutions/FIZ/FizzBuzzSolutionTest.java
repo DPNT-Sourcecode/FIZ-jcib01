@@ -22,7 +22,7 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, 13"})
+    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, fizz", "58, buzz"})
     public void fizzBuzz(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
 
