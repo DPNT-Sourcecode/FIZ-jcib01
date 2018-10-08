@@ -2,8 +2,6 @@ package befaster.solutions.FIZ;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import junitparams.JUnitParamsRunner;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -24,6 +22,7 @@ public class FizzBuzzSolutionTest {
     public void fizzBuzz() throws Exception {
         assertThat(solution.fizzBuzz(1), equalTo("1"));
         assertThat(solution.fizzBuzz(2), equalTo("2"));
+        assertThat(solution.fizzBuzz(3), equalTo("fizz"));
     }
 
 
