@@ -20,7 +20,7 @@ public class FizzBuzzSolution {
     }
 
     private String appendString(String result, String appendString) {
-        if(!result.isEmpty()){
+        if (!result.isEmpty()) {
             result = result + " ";
         }
         return result + appendString;

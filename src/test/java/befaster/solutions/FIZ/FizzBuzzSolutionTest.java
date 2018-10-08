@@ -16,13 +16,14 @@ import static org.hamcrest.Matchers.equalTo;
 @RunWith(JUnitParamsRunner.class)
 public class FizzBuzzSolutionTest {
     private FizzBuzzSolution solution;
+
     @Before
-    public void setUp(){
+    public void setUp() {
         solution = new FizzBuzzSolution();
     }
 
     @Test
-    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, fizz", "58, buzz"})
+    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, fizz", "58, buzz", "53, fizz buzz"})
     public void fizzBuzz(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
 
