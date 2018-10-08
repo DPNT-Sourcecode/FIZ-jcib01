@@ -44,7 +44,7 @@ public class FizzBuzzSolutionTest {
      */
 
     @Test
-    @Parameters({ "555, fizz buzz fake deluxe"})
+    @Parameters({ "36, fizz deluxe"})
     public void fizzBuzzNewDeluxe(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }

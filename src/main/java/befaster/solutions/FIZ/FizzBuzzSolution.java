@@ -30,8 +30,9 @@ public class FizzBuzzSolution {
         return isDeluxe(number, numberString) && (number % 2 == 1);
     }
 
+    //new rule for deluxe ...
     private boolean isDeluxe(Integer number, String numberString) {
-        if (number > 10 && (allDigitsMatch(numberString))) {
+        if (number % 3 ==0 && numberString.contains("3")) {
             return true;
         }
         return false;
