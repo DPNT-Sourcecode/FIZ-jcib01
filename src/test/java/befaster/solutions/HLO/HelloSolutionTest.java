@@ -19,7 +19,8 @@ public class HelloSolutionTest {
 
     @Test
     public void hello() throws Exception {
-        assertThat(helloSolution.hello(""), equalTo("Hello, World!"));
+        assertThat(helloSolution.hello("World"), equalTo("Hello, World!"));
+        assertThat(helloSolution.hello("James"), equalTo("Hello, James!"));
     }
 
 }
