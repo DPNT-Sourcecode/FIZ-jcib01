@@ -23,7 +23,7 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, fizz", "58, buzz", "53, fizz buzz"})
+    @Parameters({"1, 1", "2, 2", "3, fizz fake deluxe", "5, buzz fake deluxe", "15, fizz buzz", "13, fizz", "58, buzz", "53, fizz buzz"})
     public void fizzBuzz(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }
@@ -43,10 +43,12 @@ public class FizzBuzzSolutionTest {
         - All the previous rules for "fizz" and "buzz" are still valid
 
      tests failing conflict with previous rules ...
+     why fake deluxe?...
+
      */
 
     @Test
-    @Parameters({ "36, fizz deluxe", "50, buzz deluxe"})
+    @Parameters({ "36, fizz deluxe", "50, buzz deluxe", "330, fizz buzz deluxe"})
     public void fizzBuzzNewDeluxe(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
     }
