@@ -10,8 +10,12 @@ public class FizzBuzzSolution {
         }
         if (isBuzz(number, numberString)) {
             result = appendString(result, "buzz");
+
         }
-        if(isDeluxe(number, numberString)){
+        if (isFake(number, numberString)) {
+            result = appendString(result, "fake");
+        }
+        if (isDeluxe(number, numberString)) {
             result = appendString(result, "deluxe");
         }
 
@@ -22,15 +26,19 @@ public class FizzBuzzSolution {
         return result;
     }
 
+    private boolean isFake(Integer number, String numberString) {
+        return isDeluxe(number, numberString) && (number % 2 == 1);
+    }
+
     private boolean isDeluxe(Integer number, String numberString) {
-        if(number>10 && (allDigitsMatch(numberString))){
+        if (number > 10 && (allDigitsMatch(numberString))) {
             return true;
         }
         return false;
     }
 
     private boolean allDigitsMatch(String numberString) {
-        return numberString.chars().allMatch( c -> c == numberString.charAt(0));
+        return numberString.chars().allMatch(c -> c == numberString.charAt(0));
     }
 
     private boolean isBuzz(Integer number, String numberString) {
