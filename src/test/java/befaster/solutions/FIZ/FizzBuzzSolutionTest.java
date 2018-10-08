@@ -1,6 +1,7 @@
 package befaster.solutions.FIZ;
 
 import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,13 +22,10 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    public void fizzBuzz() throws Exception {
-        assertThat(solution.fizzBuzz(1), equalTo("1"));
-        assertThat(solution.fizzBuzz(2), equalTo("2"));
-        assertThat(solution.fizzBuzz(3), equalTo("fizz"));
-        assertThat(solution.fizzBuzz(5), equalTo("buzz"));
-        assertThat(solution.fizzBuzz(15), equalTo("fizz buzz"));
-        assertThat(solution.fizzBuzz(13), equalTo("13"));
+    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, 13"})
+    public void fizzBuzz(Integer number, String result) throws Exception {
+        assertThat(solution.fizzBuzz(number), equalTo(result));
+
     }
 
 
