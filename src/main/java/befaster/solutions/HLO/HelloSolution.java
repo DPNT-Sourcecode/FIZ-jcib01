@@ -4,4 +4,4 @@ public class HelloSolution {
     public String hello(String friendName) {
         return "Hello, " + friendName + "!";
     }
-}
+}

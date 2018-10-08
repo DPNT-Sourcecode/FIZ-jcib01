@@ -7,4 +7,4 @@ public class FizzBuzzSolution {
         return numberString;
     }
 
-}
+}
