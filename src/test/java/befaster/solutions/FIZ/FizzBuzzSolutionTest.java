@@ -23,11 +23,19 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, fizz", "58, buzz", "53, fizz buzz", "33, deluxe"})
+    @Parameters({"1, 1", "2, 2", "3, fizz", "5, buzz", "15, fizz buzz", "13, fizz", "58, buzz", "53, fizz buzz"})
     public void fizzBuzz(Integer number, String result) throws Exception {
         assertThat(solution.fizzBuzz(number), equalTo(result));
-
     }
 
+    /*
+        - A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
+        - A number can be "fizz", "buzz" and "deluxe" at the same time. If this happens then write "fizz buzz deluxe"
+     */
+    @Test
+    @Parameters({ "33, deluxe"})
+    public void fizzBuzzDeluxe(Integer number, String result) throws Exception {
+        assertThat(solution.fizzBuzz(number), equalTo(result));
+    }
 
 }
